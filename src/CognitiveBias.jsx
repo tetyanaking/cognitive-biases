@@ -2,7 +2,7 @@ import {hot} from 'react-hot-loader';
 import React from 'react';
 import './css/common.css';
 import './CognitiveBias.css';
-import {strings, biasCategoriesColor} from "./languages/localizationStrings";
+import {strings, biasCategoriesColor, languages} from "./languages/localizationStrings";
 import ReactGA from "react-ga";
 import BiasBox from "./component/BiasBox";
 import CategoryBox from "./component/CategoryBox";
@@ -44,9 +44,10 @@ class CognitiveBias extends React.Component {
     render() {
 
         return (<div className="bias_page">
-            <div className={"bias_container"}>
-                <button onClick={() => this.changeLanguage("en")}>English</button>
-                <button onClick={() => this.changeLanguage("ru")}>Русский</button>
+            <div className={"bias_languages"}>
+                {languages.map( lang =>
+                    <img className={"bias_lang_button"} onClick={() => this.changeLanguage(lang.locale)} src={lang.icon} ></img>
+                )}
             </div>
             <div className={"bias_container"}>
                 {this.state.categories.map(cat =>
