@@ -24,6 +24,12 @@ h1, h2, h3, h4, p{
   font-family: Arial;
 }
 
+.bias_title{
+  font-size: 50px;
+  color: #7c7d88;
+  padding: 10px;
+}
+
 .bias_container {
   display: flex;
   flex-wrap: wrap;
@@ -39,6 +45,7 @@ h1, h2, h3, h4, p{
   height: 25px;
   padding: 5px;
 }
+
 .biasbox_container {
   background-color: #ffffff;
   width: 230px;
