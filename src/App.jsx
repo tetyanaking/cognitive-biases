@@ -16,8 +16,7 @@ const App = () => (
     <Router>
         <div>
             <Switch>
-                <Redirect exact from="/" to="/welcome"/>
-                <Route path="/welcome"><CognitiveBias/></Route>
+                <Route path="/"><CognitiveBias/></Route>
             </Switch>
         </div>
     </Router>
