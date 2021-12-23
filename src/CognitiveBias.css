@@ -4,6 +4,12 @@
   font-family: Arial;
 }
 
+.bias_title{
+  font-size: 50px;
+  color: #7c7d88;
+  padding: 10px;
+}
+
 .bias_container {
   display: flex;
   flex-wrap: wrap;

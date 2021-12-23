@@ -1,11 +1,6 @@
 import {hot} from 'react-hot-loader';
 import React from 'react';
 import './CategoryBox.css';
-import ReactGA from "react-ga";
-
-ReactGA.initialize('UA-131044764-1');
-ReactGA.pageview(window.location.pathname + window.location.search);
-
 class CategoryBox extends React.Component {
 
     constructor(props) {

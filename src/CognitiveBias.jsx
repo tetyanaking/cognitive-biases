@@ -8,8 +8,8 @@ import BiasBox from "./component/BiasBox";
 import CategoryBox from "./component/CategoryBox";
 import {Cookies} from "react-cookie";
 
-// ReactGA.initialize('');
-// ReactGA.pageview(window.location.pathname + window.location.search);
+ReactGA.initialize('UA-215872888-1');
+ReactGA.pageview(window.location.pathname + window.location.search);
 
 class CognitiveBias extends React.Component {
 
@@ -39,11 +39,21 @@ class CognitiveBias extends React.Component {
             cognitiveBiases: strings.cognitiveBiases.biases,
             date: new Date()
         });
+        ReactGA.event({
+            category: 'Language',
+            action: 'Button',
+            label: lang,
+            value: 1
+        });
     }
 
     render() {
 
         return (<div className="bias_page">
+
+            <div className={"bias_languages"}>
+                <div className={"bias_title"}>{this.state.cognitiveBiases.length} {strings.cognitiveBias}</div>
+            </div>
             <div className={"bias_languages"}>
                 {languages.map( lang =>
                     <img className={"bias_lang_button"} onClick={() => this.changeLanguage(lang.locale)} src={lang.icon} ></img>
