@@ -10,9 +10,12 @@ module.exports = neutrino().webpack();
 
 
 module.exports = merge(module.exports, {
+    output: {
+        publicPath: './'
+    },
     plugins: [
         new CopyPlugin([
-            { from: 'res', to: 'res' },
+            {from: 'res', to: 'res'},
         ])
     ],
 });
