@@ -30,3 +30,4 @@
 
 # Credits
 * Inspired by https://www.visualcapitalist.com/50-cognitive-biases-in-the-modern-world/
+* vadymsvv contributed to this project
